@@ -18,7 +18,9 @@ US_EXTENSION = "/us/daily"
 IMG_DIR = "img/"
 
 BOT_PREFIX = ("!!")
-TOKEN = "NjkxMDAyMzAwNDYxNzQ0MjI5.XnZoVQ.RtDmsSH__S3YiGWd-I0Ct7GCy5A"
+
+with open("token", "r") as readToken:
+    TOKEN = readToken.read().strip()
 
 client = commands.Bot(command_prefix=BOT_PREFIX, description="Answers how many cases of COVID-19 there are in the US")
 
